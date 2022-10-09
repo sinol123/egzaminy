@@ -1,0 +1,78 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h5, ol{
+    margin-top: 0;
+    padding: 0;
+}
+
+ol{
+    padding-left: 40px;
+}
+
+#firstLeftBlock{
+    height: 400px;
+    width: 100%;
+    background-color: snow;
+    text-align: center;
+
+}
+
+#secondLeftBlock{
+    height: 400px;
+    width: 100%;
+    background-color: snow;
+    font-size: 150%;
+}
+
+#firstRightBlock{
+    height: 150px;
+    width: 100%;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+}
+
+#secondRigthBlock{
+    height: 350px;
+    width: 100%;
+    background-color: steelblue;
+    color: white;
+}
+
+#thirdRightBlock{
+    height: 300px;
+    width: 100%;
+    background-color: snow;
+    text-align: center;
+}
+
+#footer{
+    background-color: steelblue;
+    color: white;
+    clear: both;
+}
+
+.headline{
+    padding-top: 20px;
+}
+
+h2{
+    font-size: 250%;
+}
+
+img :hover{
+    padding: 3px;
+    border: solid 1px steelblue;
+}
+
+#leftBlock{
+    float:left;
+    width: 70%;
+}
+
+#rightBlock{
+    float: left;
+    width: 30%;
+}

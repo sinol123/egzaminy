@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="styl7.css">
+</head>
+<body>
+    <section id="baner">
+        <h2>Galeria miejsc ciekawych</h2>
+    </section>
+    <section id="main">
+        <img id="mainImage" src="lanzarotte.jpg" alt="galeria">
+    </section>
+    <section id="left">
+        <h3>przeglądaj zdjęcia</h3>
+        <img onclick="change('a1')" src="lanzarotte.jpg" alt="lanzarotte.jpg">
+        <img onclick="change('a2')" src="pekin.jpg" alt="pekin.jpg" id="test">
+        <img onclick="change('a3')" src="serengeti.jpg" alt="serengeti.jpg">
+        <img onclick="change('a4')" src="wenecja.jpg" alt="wenecja.jpg">
+        <img onclick="change('a5')" src="tajlandia.jpg" alt="tajlandia.jpg">
+    </section>
+    <section id="right">
+        <h3>Obrazy w naszej galerii</h3>
+        <table>
+            <tr>
+                <th>Europa</th>
+                <th>Azja</th>
+                <th>Afryka</th>
+            </tr>
+            <tr>
+                <th>2</th>
+                <th>2</th>
+                <th>1</th>
+            </tr>
+        </table>
+        <p>Polub nas
+           <img id="heart" onclick="change('b1')" src="icon-off.png" alt=""> 
+        </p>
+        <a target="_blank" href="https://pixabay.com">Odkryj wiecej zdjęć</a>
+    </section>
+    <section id="footer">
+        siemaSiema 123456
+    </section>
+    <script>
+        var mainImage = document.getElementById("mainImage");
+        var heart = document.getElementById("heart");
+        function change(a){
+            switch (a){
+                case 'a1': 
+                    mainImage.setAttribute("alt", "lanzarotte.jpg");
+                    mainImage.setAttribute("src", "lanzarotte.jpg");
+                    break;
+                case 'a2': 
+                    mainImage.setAttribute("src", "pekin.jpg");
+                    mainImage.setAttribute("alt", "pekin.jpg");
+                    break;
+                case 'a3':
+                    mainImage.setAttribute("src", "serengeti.jpg");
+                    mainImage.setAttribute("alt", "serengeti.jpg");
+                    break;
+                case 'a4': 
+                    mainImage.setAttribute("src", "wenecja.jpg");
+                    mainImage.setAttribute("alt", "wenecja.jpg");
+                    break;
+                case 'a5': 
+                    mainImage.setAttribute("src", "tajlandia.jpg");
+                    mainImage.setAttribute("alt", "tajlandia.jpg");
+                    break;
+                case 'b1':
+                    heart.setAttribute("src","icon-on.png");
+                    heart.setAttribute('onclick','change("b2")');
+                    break;
+                case 'b2':
+                    heart.setAttribute("src","icon-off.png");
+                    heart.setAttribute('onclick','change("b1")');
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

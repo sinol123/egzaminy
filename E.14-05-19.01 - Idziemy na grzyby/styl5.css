@@ -1,0 +1,50 @@
+*{
+    font-family: verdana;
+}
+
+#halo1{
+    background-color: sienna;
+    height: 100px;
+    width: 20%;
+    float: left;
+}
+
+#halo2{
+    background-color: sienna;
+    color: orange;
+    height: 100px;
+    width: 80%;
+    float:left;
+}
+
+#elo1{
+    background-color: burlywood;
+    height: 700px;
+    width: 70%;
+    float:left;
+}
+
+#elo2{
+    background-color: burlywood;
+    height: 700px;
+    width: 30%;
+    float:left;
+}
+
+footer{
+    background-color: sienna;
+    color: orange;
+    text-align: center;
+    clear: both;
+}
+
+img{
+    margin: 7px;
+    padding: 5px;
+    border: 1px solid;
+    border-color: rosybrown;
+}
+
+img :hover{
+    border-color: maroon;
+}

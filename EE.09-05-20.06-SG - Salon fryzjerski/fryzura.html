@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usługi fryzjerskie</title>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+    <div id="leftBlock">
+        <section id="firstLeftBlock">
+            <h2 class="headline"><a href="index.html">Salon Fryzjerski</a></h2>
+            <img src="obraz2.jpg" alt="czesanie">
+        </section>
+        <section id="secondLeftBlock">
+            <h3>Dziś promocja na strzyzenie włosów</h3>
+            <input value="1" name="siema" type="radio">krótkie</input>
+            <input value="2" name="siema" type="radio">Średnie</input>
+            <input value="3" name="siema" type="radio">półdługie</input>
+            <input value="4" name="siema" type="radio">długie</input>
+            <input onclick="technoZul()" type="button" value="Odkryj promocje"/>
+            <p id="halo"></p>
+        </section>
+    </div>
+    <div id="rightBlock">
+        <section id="firstRightBlock">
+            <h2 class="headline">MEMU</h2>
+        </section>
+        <section id="secondRigthBlock">
+            <ol>
+                <li><a href="fryzura.html">Strzyżenie</a>
+                    <ul>
+                        <li>krótkie</li>
+                        <li>średnie</li>
+                        <li>półdługie</li>
+                        <li>długie</li>
+                    </ul>
+                </li>
+                <li>Czesanie</li>
+                <li>Koloryzacja</li>
+            </ol>
+        </section>
+        <section id="thirdRightBlock">
+            <img src="obraz1.png" alt="Fryzjer">
+        </section>
+    </div>
+    <section id="footer">
+        siemaEniu123
+    </section>
+    <script>
+        function technoZul(){
+            a = document.getElementById("halo")
+            let selectedValue = document.querySelector( 'input[name="siema"]:checked');   
+
+            if(selectedValue != null){
+                switch (selectedValue.value){
+                    case "1":
+                        a.innerHTML = "Cena strzyżenia: 25zł";
+                        break
+                    case "2":
+                        a.innerHTML = "Cena strzyżenia: 30zł";
+                        break
+                    case "3":
+                        a.innerHTML = "Cena strzyżenia: 40zł";
+                        break
+                    case "4":
+                        a.innerHTML = "Cena strzyżenia: 50zł";
+                        break
+                }
+            }
+            else{
+                a.innerHTML = "wybierz rodzaj wariacie"
+            }
+        }
+    </script>
+</body>
+</html>

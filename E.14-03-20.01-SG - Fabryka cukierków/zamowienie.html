@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl10.css">
+    <title>Fabryka cukierków</title>
+</head>
+<body>
+    <section class="topBlocks" id="firstTopBlock">
+        <a href="zamowienie.html">Zamów Cukierki</a>
+    </section>
+    <section class="topBlocks" id="secondTopBlock">
+        <a href="index.html"><img src="logo.png" alt="Nasze logo"></a>
+    </section>
+    <section id="baner">
+        <h1>Strefa zamowień</h1>
+    </section>
+    <section class="mainBlocks" id="leftMainBlock">
+        Numer kształtu:<br>
+        <input id="shape" type="number" min="0" max="3">
+        skomponuj swój kolor, podaj RGB:<br>
+        R: <input id="red" type="number" min="0" max="255"><br>
+        G: <input id="green" type="number" min="0" max="255"><br>
+        B: <input id="blue" type="number" min="0" max="255"><br>
+        <input type="button" value="zamówienie" onclick="order()"><br>
+        <p id="paragraf">Twoje zamówienie</p>
+        <input type="button" value="kolor" id="colorButton">
+    </section>
+    <section class="mainBlocks" id="rightMainBlock">
+        <h2>Nasza oferta</h2>
+        <table>
+            <tr>
+                <td>Kształty</td>
+                <td rowspan="2">Możesz zamówić<br>dowolny kolor cukierka</td>
+            </tr>
+            <tr>
+                <td><ol>
+                    <li>cytryna</li>
+                    <li>liść</li>
+                    <li>banan</li>
+                </ol></td> 
+            </tr>
+        </table>
+    </section>
+    <section id="footer">Autor strony: siema eniu </section>
+    <script>
+        function order(){
+            let shape = document.getElementById("shape").value;
+            let red = document.getElementById("red").value;
+            let green = document.getElementById("green").value;
+            let blue = document.getElementById("blue").value;
+            let paragraf = document.getElementById("paragraf");
+            let colorButton = document.getElementById("colorButton");
+            let color = "rgb("+ red +", "+ green +", "+ blue +")";
+            colorButton.style.backgroundColor = color;
+            console.log(red)
+            switch(shape){
+                case "1":
+                    paragraf.innerHTML = "Twoje zamówienie to cukierek cytryna";
+                    break;
+                case "2":
+                    paragraf.innerHTML = "Twoje zamówienie to cukierek liść";
+                    break;
+                case "3":
+                    paragraf.innerHTML = "Twoje zamówienie to cukierek banan";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
