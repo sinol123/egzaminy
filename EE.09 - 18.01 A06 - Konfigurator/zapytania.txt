@@ -1,0 +1,7 @@
+1. CREATE USER 'Agnieszka'@'%' IDENTIFIED VIA mysql_native_password USING '***';GRANT USAGE ON *.* TO 'Agnieszka'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+
+2. SELECT AVG(rocznik) FROM `samochody` WHERE marka = 'opel';
+
+3. SELECT samochody.marka, klienci.imie FROM wypozyczenia INNER JOIN samochody ON wypozyczenia.samochody_id = samochody.id INNER JOIN klienci ON wypozyczenia.klienci_id = klienci.id
+
+4. ALTER TABLE `klasa` DROP `cena`;

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi kosmetyczne</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="left">
+        <section id="leftTopBlock">
+            <h2>W ofercie</h2>
+            <ul>
+                <li>
+                    <a href="twarz.html">Zabiegi na twarz</a> 
+                    <ol>
+                        <li>Pilling</li>
+                        <li>Maska</li>
+                        <li>Regulacja Brwi</li>
+                    </ol>
+                </li>
+                <li>Masaż</li>
+                <li>Diety oczyszczające</li>
+                <li><a href="index.html">Do strony głównej</a></li>
+        </ul>
+        </section>
+        <section id="leftBottomBlock">
+            <img src="obraz1.jpg" alt="kosmetyczka">
+        </section>
+    </div>
+    <div id="right">
+        <section id="rightTopBlock">
+            <h1>Salon kosmetyczny</h1>
+        </section>
+        <section id="rightBottomBlock">
+            <h2>sprawdź cenę swojej wizyty</h2>
+            <input type="checkbox" id="box1">Pilling<br>
+            <input type="checkbox" id="box2">Maska<br>
+            <input type="checkbox" id="box3">Masaż twarzy<br>
+            <input type="checkbox" id="box4">Regulacja brwi<br>
+            <input type="button" onclick="rychopsycho()" value="Sprawdź cenę"><br>
+            <p id="hehehe"></p>
+        </section>
+    </div>
+    <section id="footer">
+        autor: rycho psycho :00
+    </section>
+    <script>
+        function rychopsycho(){
+            let b = 0;
+            for(i = 1; i < 5; i++){
+               let a = document.getElementById('box' + i);
+               if(a.checked == true){
+                    switch(i){
+                        case 1: 
+                            b += 45;
+                            break;
+                        case 2:
+                            b += 30;
+                            break;
+                        case 3:
+                            b += 20;
+                            break;
+                        case 4:
+                            b += 5;
+                            break;
+                    }
+               }
+                
+            }
+            document.getElementById("hehehe").innerHTML = "cena to: " + b;
+        }
+    </script>
+</body>
+</html>
