@@ -1,0 +1,33 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#leftBlock{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+#rightBlock{
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+    float: left;
+}
+
+#footer{
+    clear: both;
+    background-color: dimgray;
+    color: white;
+}
+
+#rightBlock img, ul{
+    float: left;
+}
+
+#rightBlock p {
+    clear: both;
+}

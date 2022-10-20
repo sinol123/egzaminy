@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style w javaScript</title>
+    <link rel="stylesheet" href="styl6.css">
+</head>
+<body>
+    <section id="leftBlock">
+        <h1>konfigurator stylu</h1>
+        <p>
+            Podaj kolor tła <br>
+            <input onclick="color(1)" value="Indigo" type="button"><br>
+            <input onclick="color(2)" value="Steelblue" type="button"><br>
+            <input onclick="color(3)" value="olive" type="button"><br>
+        </p>
+        <p>
+            Podaj kolor trzcionki <br>
+            <select onchange="fontColor()" id="fontColor">
+                <option value="1">White</option>
+                <option value="2">Tan</option>
+                <option value="3">Bisque</option>
+                <option value="4">plum</option>
+            </select>
+        </p>
+        <p>
+            podaj rozmiar trzcionki w procentach<br>
+            <input id="fontSize" onchange="fontSize()" value="100%" type="text">
+        </p>
+        <p>
+            Czy obrazek ma mieć ramkę? <br>
+            <input id="border" type="checkbox" onchange="border()">
+        </p>
+        <p>
+            jaki jest typ punktora listy?<br>
+            <input name="typ" type="radio" onchange="hehehe(1)">dysk</input>
+            <input name="typ" type="radio" onchange="hehehe(2)">kwadrat</input>
+            <input name="typ" type="radio" onchange="hehehe(3)">okrąg</input>
+        </p>
+    </section>
+    <section id="rightBlock">
+        <img src="gibraltar.jpg" alt="półwysep Gibraltar">
+        <ul>
+            <li>element 1</li>
+            <li>element 2</li>
+            <li>element 3</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </section>
+    <section id="footer">
+        autor siemasiemaEniuENiu
+    </section>
+    <script>
+        var block = document.getElementById("rightBlock");
+        var ul = document.querySelector("ul");
+        var img = document.querySelector("img");
+        var Color = document.getElementById("fontColor");
+        var hehe = document.getElementById("fontSize");
+        var borderStatus = document.getElementById("border");
+        function color(a){
+            switch (a) {
+                case 1:
+                    block.style.backgroundColor = "indigo";
+                    break;
+                case 2:
+                    block.style.backgroundColor = "SteelBlue";
+                    break;
+                case 3:
+                    block.style.backgroundColor = "olive";
+                    break;
+            }
+        }
+
+        function fontColor(){
+            switch (color.value) {
+                case "1":
+                    block.style.color = "White";
+                    break;
+                case "2":
+                    block.style.color = "Tan";
+                    break;
+                case "3":
+                    block.style.color = "Bisque";
+                    break;
+                case "4":
+                    block.style.color = "Plum";
+                    break;
+            }
+        }
+
+        function fontSize(){
+            block.style.fontSize = hehe.value;
+        }
+
+        function border(){
+            if(borderStatus.checked == true){
+                img.style.border = "1px solid black"
+            }
+            else{
+                img.style.border = "0"
+            }
+        }
+
+        function hehehe(a){
+            switch (a) {
+                case 1:
+                    ul.style.listStyleType = "square";
+                    break;
+                case 2:
+                    ul.style.listStyleType = "disc";
+                    break;
+                case 3:
+                    ul.style.listStyleType = "circle";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
